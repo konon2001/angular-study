@@ -11,7 +11,10 @@
 * ngRoute
 * Directive
 	* DOM 생성
-	* $compile, $link, element.append(template);
+	* $compile('html string...')($scope); <- Link 까지 한큐에 
+	* 61페이지 참조 풀어서 하면: -> $compile, $link, element.append(template);
+	* var testFunc = function(outerParam) {console.log("outer: " + outerParam); return function(innerParam) {console.log("inner: "+ innerParam)};}
+	* testFunc(1)(2);
 * template element vs instance element
 * prelink vs postlink 
 	* http://www.jvandemo.com/the-nitty-gritty-of-compile-and-link-functions-inside-angularjs-directives/
