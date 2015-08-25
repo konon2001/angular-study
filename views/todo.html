@@ -1,0 +1,8 @@
+<div>
+	<p>{{todoText}}</p>
+	<input type="text" ng-model="todoItem"/>
+	<button ng-show="isBtn" ng-click="addItem()">Add Todo</button>
+	<ul ui-sortable ng-model="itemList">
+		<li ng-repeat="item in itemList"> {{$index + ". " + item}}</li>
+	</ul>
+</div>
