@@ -14,24 +14,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-resource.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-sortable/0.13.4/sortable.js"></script>
 	<script src="todoApp.js"></script>
-	<script src="ToDoController.js"></script>
+	<script src="controllers/ToDoController.js"></script>
+	<script src="controllers/AboutController.js"></script>
+
 </head>
 <body>
-	<div ng-controller="DefaultController" woojins-attr="afds">
-		<h4>{{myTodoTitile}}</h4>
-		<input type="text" ng-model="myText" ng-change="printLog()"/>
-		<button ng-click="notifyAlert()">Get Alert!</button>
-	</div>
-
-	<div ng-controller="ToDoController">
-		<p>{{todoText}}</p>
-		<input type="text" ng-model="todoItem"/>
-		<button ng-show="isBtn" ng-click="addItem()">Add Todo</button>
-		<ul ui-sortable ng-model="itemList">
-			<li ng-repeat="item in itemList"> {{$index + ". " + item}}</li>
-		</ul>
-		
-	</div>
-	
+	<div class="container" ng-view></div>
 </body>
 </html>
