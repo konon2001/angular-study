@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyToDo">
+<head>
+	<meta charset="UTF-8">
+	<title>Document 1</title>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-route.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-cookies.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-resource.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-sortable/0.13.4/sortable.js"></script>
+	<script src="todoApp.js"></script>
+	<script src="ToDoController.js"></script>
+</head>
+<body>
+	<div ng-controller="DefaultController" woojins-attr="afds">
+		<h4>{{myTodoTitile}}</h4>
+		<input type="text" ng-model="myText" ng-change="printLog()"/>
+		<button ng-click="notifyAlert()">Get Alert!</button>
+	</div>
+
+	<div ng-controller="ToDoController">
+		<p>{{todoText}}</p>
+		<input type="text" ng-model="todoItem"/>
+		<button ng-show="isBtn" ng-click="addItem()">Add Todo</button>
+		<ul ui-sortable ng-model="itemList">
+			<li ng-repeat="item in itemList"> {{$index + ". " + item}}</li>
+		</ul>
+		
+	</div>
+	
+</body>
+</html>
