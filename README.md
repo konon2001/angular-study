@@ -18,3 +18,8 @@
 * template element vs instance element
 * prelink vs postlink 
 	* http://www.jvandemo.com/the-nitty-gritty-of-compile-and-link-functions-inside-angularjs-directives/
+
+## 참고 자료
+* http://www.slideshare.net/bmihaylov/the-angularjs-way
+* https://github.com/timjacobi/angular-education
+* http://teropa.info/blog/2013/11/03/make-your-own-angular-part-1-scopes-and-digest.html
