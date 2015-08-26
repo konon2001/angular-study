@@ -10,7 +10,7 @@
 				var strArr = $scope.testData.split(' ');
 				angular.forEach(strArr, function(val){
 					if(val === "WoW") {
-						alert("WoW");
+						console.log("WoW");
 					} else {
 						console.log("No Wow!");
 					}

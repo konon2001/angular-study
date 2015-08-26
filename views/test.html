@@ -1,0 +1,16 @@
+<h2>Directive Test</h2>
+<div>
+	<p>Test Input</p>
+	<label>Outer Text:</label><input type="text" ng-model="outer.text"></br>
+	<label>Outer No:</label><input type="text" ng-model="outer.no"></br>
+	<label>Inner Text:</label><input type="text" ng-model="inner.text"></br>
+	<label>Inner No:</label><input type="text" ng-model="inner.no">
+</div>
+<div class="testOutput">
+	<p>Test Output</p>
+	<outer-dom outer-text={{outer.text}} outer-no={{outer.no}}
+		inner-text={{inner.text}} inner-no={{inner.no}}></outer-dom>
+</div>
+<div>
+	<button ng-click="getData()">Get it!</button>
+</div>
