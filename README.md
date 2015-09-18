@@ -3,6 +3,8 @@
 ## 실행환경 준비
 * sudo npm install http-server -g
 * http-server .
+* sudo npm install -g express
+* sudo npm install -g mongoose
 
 ## 3주차 스터디 내용
 * 지난주 복습
